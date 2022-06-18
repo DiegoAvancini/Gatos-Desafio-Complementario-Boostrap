@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto+Mono:wght@500&display=swap');
+
+
+:root {
+    /* Font-size */
+    --size-h1: 64px;
+    --size-h2: 28px;
+    --size-h3: 20px;
+    --size-p: 14px;
+    --size-a: 28px;
+    --size-a-md: 18px;
+    --size-footer: 1.4rem;
+
+    /* Font-family */
+    --text-logo: 'Kdam Thmor Pro';
+    --text-principal: 'Roboto Mono';
+
+    /* Spacing */
+    --spacing-large: 6rem;
+    --specing-medium: 2.4rem;
+    --spacing-samll: 2rem;
+    --spacing-xsamll: 1rem;
+    --spacing-xxsmall: 0.7rem;
+
+    /* Colors */
+    --base: #F7EFD0;
+    --prymary: #000000;
+    --secondary: #3eabab;    ;
+    --division: #FF312E;
+
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+body{
+    max-width: 1200px;
+    padding: 0 5%;
+    margin: 0 auto;
+    background-color: var(--base);
+}
+img {
+    width: 100%;
+}
+
+header{
+    /* padding: var(--spacing-xsamll) 0; */
+    border-bottom: 4px groove var(--division);
+    display: flex;
+}
+
+.nav-item{
+    font-family: var(--text-principal);
+    font-size: var(--size-a);
+    color: var(--prymary);
+}
+
+.nav-link:hover{
+    color: var(--secondary);
+}
+
+nav{
+    width: 997px;
+    display: flex; 
+}
+
+main {
+    margin: 0%;
+    padding: var(--spacing-xsamll) 0%;
+    max-width: 100%;
+}
+
+.navbar-brand{
+    font-family: var(--text-logo);
+    font-size: var(--size-h1);
+}
+
+h2{
+    font-family: var(--text-principal);
+    font-size: var(--size-h2);
+    margin-bottom: var(--spacing-xxsmall);
+}
+h3{
+    font-family: var(--text-principal);
+    font-size: var(--size-h3);
+    color: var(--secondary);
+}
+
+footer {
+    text-align: center;
+    padding: 2px 5%;
+    margin: auto;
+    text-decoration: none;
+    border-top: 4px groove var(--division);
+ }
+
+ footer img {
+     width: 30px;
+     margin: 20px 20px 0px;
+ }
+
+/* Inicio */
+
+main section{
+    display: flex;
+    align-items: center;
+}
+
+main section div{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: var(--spacing-xsamll);
+    
+}
+
+main section div img{
+    width: 100%;
+    height: 100%;
+}
+
+main section div img:nth-of-type(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+main section div img:nth-child(2){
+     grid-column: span 4;
+     grid-row: span 2;
+ }
+main section div img:nth-child(3){
+     grid-row: span 3;
+ }
+main section div img:nth-child(4){
+     grid-column: span 3;
+ }
+main section div img:nth-child(5){
+     grid-column: span 3 ;
+ }
+
+main section article{
+    width: 50%;
+    padding: 0 var(--spacing-samll);
+ }
+
+ /* CONTACTO */
+
+ main{
+    display: flex;
+    flex-direction: row;
+ }
+ main picture .img{
+    width: 100%;
+ }
+
+ main section .form{
+    width: 50%;
+ }
+
+ .card{
+    background-color: var(--base);
+    height: 100%;
+ }
+
+ /* Pagina - Razas */
+
+.col-sm-6{
+    padding-top: var(--spacing-xsamll);
+}
+
+/* Pagina - Comidas */
+
+main .d-flex{
+    width: 100%;
+}
+main section img{
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+
+.navbar-brand{
+    font-size: 52px;
+}
+
+main{
+    padding: var(--spacing-xxsmall) 0;
+    width: 100%;
+}
+main section{
+    flex-direction: column;
+    width: 100%!important;
+    padding: var(--spacing-xsamll) 0;
+}
+main section div{
+    padding: var(--spacing-xsamll) 0;
+}
+main section div.card{
+    width: 80%;
+}
+main section img{
+    width: 80%;
+}
+main section .seca{
+    order: -1;
+}
+.grid{
+    width: 90%;
+}
+
+main section article{
+    width: 90%;
+    padding: var(--spacing-xxsmall) var(--spacing-xxsmall) 0;
+}
+
+main.d-flex.d-flex.contacto{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center!important;
+}
+main.d-flex.d-flex.contacto img{
+    width: 80%!important;
+    
+}
+}
+
+@media (max-width: 1200px){
+.nav-item{
+    font-size: var(--size-a-md);
+}
